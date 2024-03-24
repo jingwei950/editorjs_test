@@ -1,0 +1,70 @@
+@layer layer {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-secular leading-none text-neutral-900;
+    }
+
+    h1.display-4 {
+        @apply text-7xl sm:text-8xl;
+    }
+
+    h1.display-5 {
+        @apply text-6xl sm:text-7xl;
+    }
+
+    h1.display-6 {
+        @apply text-5xl sm:text-6xl;
+    }
+
+    h1 {
+        @apply text-4xl sm:text-5xl;
+    }
+
+    h2 {
+        @apply text-3xl sm:text-4xl bg-red-500;
+    }
+
+    h3 {
+        @apply text-2xl sm:text-3xl;
+    }
+
+    h4 {
+        @apply text-xl sm:text-2xl;
+    }
+
+    h5 {
+        @apply text-lg sm:text-xl;
+    }
+
+    h6 {
+        @apply text-base sm:text-lg;
+    }
+
+    p {
+        @apply font-inter text-base tracking-widest text-neutral-900;
+    }
+
+    p.subtext {
+        @apply leading-tight;
+    }
+
+    p.caption {
+        @apply text-xs sm:text-sm;
+    }
+
+    p.body-place-holder {
+        @apply my-5 text-center font-medium italic leading-tight text-neutral-500;
+    }
+
+    li {
+        @apply !text-left !font-inter !text-base !normal-case;
+    }
+
+    .text-rvi {
+        @apply max-w-xs bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent;
+    }
+}

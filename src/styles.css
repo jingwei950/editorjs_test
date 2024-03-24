@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply text-4xl sm:text-5xl;
+    }
+}
+
+html, body { height: 100%; }
+body { margin: 0; }
+
+.codex-editor {
+    @apply hover:bg-gray-300 hover:cursor-pointer pl-3 max-w-3xl h-fit rounded-lg;
+}
+
+.codex-editor__redactor {
+    @apply !pb-0
+}
+
+/* .ce-block.ce-block--focused{
+    @apply  rounded-lg 
+} */
+
+.ct{
+    @apply !z-[1000]
+}
+
+.ce-block__content {
+    @apply max-w-full mr-0
+}
+
+.ce-paragraph, .ce-header {
+    @apply !px-2;
+}
+
+.cdk-dialog-container{
+    @apply bg-neutral-100 !rounded-lg overflow-scroll;
+}
+
