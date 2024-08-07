@@ -4,39 +4,105 @@
 @tailwind utilities;
 
 @layer base {
-    h1 {
-        @apply text-4xl sm:text-5xl;
-    }
+  h1 {
+    @apply text-4xl sm:text-5xl;
+  }
+  h2 {
+    @apply text-3xl sm:text-4xl;
+  }
+  h3 {
+    @apply text-2xl sm:text-3xl;
+  }
+  h4 {
+    @apply text-xl sm:text-2xl;
+  }
+  h5 {
+    @apply text-lg sm:text-xl;
+  }
 }
 
-html, body { height: 100%; }
-body { margin: 0; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
 
-.codex-editor {
-    @apply hover:bg-gray-300 hover:cursor-pointer pl-3 max-w-3xl h-fit rounded-lg;
+/* .codex-editor {
+  @apply max-w-3xl pl-3 rounded-lg hover:bg-gray-300 hover:cursor-pointer h-fit;
+} */
+
+.ce-block {
+  /* @apply max-w-3xl pl-3 rounded-lg hover:bg-gray-300 hover:cursor-pointer h-fit; */
+  @apply cursor-text;
+}
+
+/* .codex-editor__redactor [contenteditable]:empty::after {
+  content: "Type / to browse option" !important;
+  position: absolute;
+  left: 7px;
+  top: 1;
+} */
+
+/* Use attribue placeholder when it is not focused */
+.ce-paragraph[data-placeholder]:empty:before {
+  content: attr(placeholder);
+}
+
+/* User custom content for placeholder when it is empty and focused */
+.ce-paragraph[data-placeholder]:empty:focus::after {
+  content: "Type / to browse option" !important;
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  color: #aaa;
+}
+
+.image-tool__caption {
+  display: none;
+}
+
+/* .ce-paragraph::before:focus {
+  content: " Use '/' to create question" !important;
+  color: #aaa;
+  position: absolute;
+  top: 0;
+} */
+
+.ce-header {
+  @apply p-0.5;
 }
 
 .codex-editor__redactor {
-    @apply !pb-0
+  @apply !pb-0;
+}
+
+.codex-editor {
+  @apply h-full;
 }
 
 /* .ce-block.ce-block--focused{
     @apply  rounded-lg 
 } */
 
-.ct{
-    @apply !z-[1000]
+.ct {
+  @apply !z-[1000];
+}
+
+.ce-popover.ce-popover--opened {
+  @apply !z-[1000];
 }
 
 .ce-block__content {
-    @apply max-w-full mr-0
+  @apply max-w-full mr-0;
 }
 
-.ce-paragraph, .ce-header {
-    @apply !px-2;
+.ce-paragraph,
+.ce-header {
+  @apply !px-2;
 }
 
-.cdk-dialog-container{
-    @apply bg-neutral-100 !rounded-lg overflow-scroll;
+.cdk-dialog-container {
+  @apply bg-neutral-100 !rounded-lg !max-w-screen-xl overflow-hidden;
 }
-

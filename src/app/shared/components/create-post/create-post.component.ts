@@ -1,7 +1,12 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 // Angular material
-import {Dialog, DialogRef, DIALOG_DATA, DialogModule} from '@angular/cdk/dialog';
+import {
+  Dialog,
+  DialogRef,
+  DIALOG_DATA,
+  DialogModule,
+} from '@angular/cdk/dialog';
 
 // Components
 import { EditorComponent } from '../editor/editor.component';
@@ -11,16 +16,17 @@ import { EditorComponent } from '../editor/editor.component';
   standalone: true,
   templateUrl: './create-post.component.html',
   imports: [EditorComponent],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CreatePostComponent {
-
   constructor(public dialog: Dialog) {}
 
-  openDialog(){
+  openDialog() {
     this.dialog.open<string>(EditorComponent, {
       width: '500px',
-      height: '300px',
+      height: 'auto',
+      minHeight: '500px',
+      maxHeight: '800px',
     });
   }
 }
